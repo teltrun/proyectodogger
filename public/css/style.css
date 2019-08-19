@@ -1,0 +1,1084 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+.footer {
+  height: 300px;
+  color: grey;
+}
+/*Empieza css del header*/
+
+.contenedor_header {
+  background-color: white;
+  border-bottom: black 2px solid;
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+}
+
+.header_izquierda {
+  margin-left: 20px;
+  margin: auto;
+  width: 20%;
+}
+
+
+.header_medio {
+  flex-wrap: wrap;
+  margin:auto;
+  justify-content: center;
+  width: 60%;
+}
+
+.material-icons lupa {
+  margin-right: 10px;
+  padding: 10px;
+}
+
+
+.imagen_logo {
+  width: 40%;
+  vertical-align: middle;
+  display: block;
+  margin: auto;
+}
+
+.header_derecha {
+  flex-wrap: wrap;
+  display: flex;
+  margin: auto;
+  width: 20%;
+  margin-right: 20px;
+}
+
+
+.boton_perfil, .boton_registrarse {
+  outline: 0;
+  border:0;
+  vertical-align:baseline;
+  background:transparent;
+  text-align: center;
+  font-weight: 600 ;
+  text-transform: uppercase;
+  color: black;
+  font-size: 12px;
+  margin: auto;
+  padding: 5px;
+  justify-content: flex-end;
+}
+
+.menu_lateral_derecha {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: -50px; /* Establecemos la barra en la izquierda */
+	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+.menu_lateral_derecha ul {
+	list-style: none;
+}
+
+.menu_lateral_derecha ul li a {
+	display: flex;
+  justify-content: flex-end;
+  align-items: center;
+	color:#fff;
+	background: #000;
+	/* padding: 10px 15px; */
+	text-decoration: none;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+  width: 70px;
+  height: 50px;
+  padding-right: 13px;
+  transform: translateX(-20px);
+}
+
+.menu_lateral_derecha ul li a:hover {
+background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+transform: translateX(0);
+}
+
+.menu_lateral_izquierda{
+  position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	right: -50px; /* Establecemos la barra en la izquierda */
+	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+.menu_lateral_izquierda ul {
+	list-style: none;
+}
+
+.menu_lateral_izquierda ul li a {
+	display: flex;
+  justify-content: flex-start;
+  align-items: center;
+	color:#fff;
+	background: #000;
+	/* padding: 10px 15px; */
+	text-decoration: none;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+  width: 70px;
+  height: 50px;
+  padding-left: 13px;
+  transform: translateX(-20px);
+}
+
+.menu_lateral_izquierda ul li a:hover {
+background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+transform: translateX(-50px);
+}
+
+@media screen and (min-width: 768px) {
+  .header_hamburguesa {
+    display:none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+  .boton_registrarse {
+    display:none;
+    }
+  .menu_lateral_derecha, .menu_lateral_izquierda {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+/*Resposnive del header*/
+  .contenedor_header {
+    width: 100%;
+    display: flex;
+  }
+
+  .header_medio {
+    flex-wrap: wrap;
+    margin:auto;
+    justify-content: center;
+    width: 90%;
+
+  }
+  .header_hamburguesa {
+    display: flex;
+    flex: wrap;
+    margin: auto;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .header_derecha {
+    flex-wrap: wrap;
+    display: flex;
+    margin: auto;
+
+  }
+
+  .header_izquierda {
+    margin-left: 20px;
+    margin: auto;
+    width: 10%;
+  }
+
+  .material-icons lupa {
+    padding: 10px;
+    justify-content: flex-end;
+    margin-top: 5px;
+  }
+
+  .imagen_logo {
+    width: 80%;
+    vertical-align: middle;
+    display: block;
+    margin: auto;
+  }
+
+
+  .boton_perfil{
+    outline: 0;
+    border:0;
+    vertical-align:baseline;
+    background:transparent;
+    text-align: center;
+    font-weight: 600 ;
+    text-transform: uppercase;
+    color: black;
+    font-size: 12px;
+    margin: auto;
+    padding: 10px;
+    justify-content: flex-end;
+  }
+
+.menu_lateral_derecha, .menu_lateral_izquierda {
+  position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+  left: -50px; /* Establecemos la barra en la izquierda */
+  top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+  z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+  .menu_lateral_derecha ul, .menu_lateral_izquierda ul {
+    list-style: none;
+  }
+
+  .menu_lateral_derecha ul li a, .menu_lateral_izquierda ul li a {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color:#fff;
+    background: #000;
+    /* padding: 10px 15px; */
+    text-decoration: none;
+    -webkit-transition:all 500ms ease;
+    -o-transition:all 500ms ease;
+    transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+    width: 70px;
+    height: 50px;
+    padding-right: 13px;
+    transform: translateX(-20px);
+  }
+
+  .menu_lateral_derecha ul li a:hover {
+  background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+  transform: translateX(0);
+}
+
+  .menu_lateral_izquierda ul li a:hover {
+  background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+  transform: translateX(0);
+}
+
+}
+
+
+
+
+/*Empieza css de la parte del login y registracion*/
+.bodyRegistro, .bodyInicioSesion {
+  background-color: black;
+}
+
+/*Caja Blanca*/
+.informacionInicioSesion {
+  background-color: white; /*Fondo Blanco*/
+  width: 700px;
+  height: 450px;
+  margin-top: 70px;
+}
+
+.informacionRegistrarse {
+  background-color: white; /*Fondo Blanco*/
+  width: 700px;
+  height: 750px;
+  margin-top: 70px;
+}
+
+/*General*/
+.formulariosRegistro {
+  display: block;
+  margin: auto;
+  text-align: center;
+  margin-top: 60px;
+  padding:0px;
+  margin-bottom: 20px;
+}
+
+.formulariosInicioSesion {
+  margin: auto;
+  width: 500px;
+  text-align: center;
+  margin-top: 80px;
+  padding:0px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/*Tipografia del formulario*/
+#nombre, #contraseña{
+  outline: 0;
+  border:0;
+  vertical-align:baseline;
+  background:transparent;
+  text-align: center;
+  font-weight: lighter;
+  border-bottom: black 1px solid;
+  width: 500px;
+  margin-top: 20px;
+}
+
+#nombreApellidoRegistro, #nombreUsuarioRegistro, #emailRegistro, #contraseñaRegistro, #nombreUsuario, #select, #fotoDePerfil, #customCheck1 {
+  outline: 0;
+  border:0;
+  vertical-align:baseline;
+  background:transparent;
+  text-align: center;
+  font-weight: lighter;
+  border-bottom: black 1px solid;
+  width: 500px;
+  padding: 8px;
+}
+
+/*Tipografia del formulario*/
+#nombre, #password{
+  margin-top: 20px;
+}
+
+
+.campoForm{
+  outline: 0;
+  border:0;
+  vertical-align:baseline;
+  background:transparent;
+  text-align: center;
+  font-weight: lighter;
+  border-bottom: black 1px solid;
+  width: 500px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+
+
+.fotoPerfil {
+  width: auto;
+  padding-bottom: 10px;
+}
+
+.campoPerfil{
+  width: auto;
+  font-weight: lighter;
+  font-size: small;
+}
+
+.campoError{
+  border-bottom: red 1px solid;
+}
+
+.checkFormulario{
+  margin-top: 20px;
+}
+
+.tituloIniciarSesion, .tituloRegistrarse {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin: auto;
+  padding: 30px;
+  font-size: 20px;
+}
+/*Si olvidaste la contraseña*/
+.recordarme {
+  margin-top: 50px;
+}
+
+.botones {
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-top: 150px;
+}
+
+.botonListo {
+  text-align: center;
+}
+
+.botonRegistrarse {
+  text-align: center;
+}
+
+.botonA, .botonB {
+  outline: 0;
+  border:0;
+  margin-right: 0px;
+  margin-left: 0px;
+  vertical-align:baseline;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 10px;
+  color: black;
+  font-size: 12px;
+  background: white;
+  border: 1px solid red;
+  width: 700px;
+}
+
+#repetirContrasenia{
+  margin-bottom: 70px;
+}
+
+#select {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+
+.terminosCondiciones {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+/*Resposnive de la parte del login*/
+  .bodyRegistro, .bodyInicioSesion {
+    background-color: white;
+  }
+
+  .infoPregunta {
+    color: black;
+    letter-spacing: 2px;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    padding:0;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  #nombre, #contraseña{
+    font-size: 20px;
+    border-bottom: black 1px solid;
+    width: 200px;
+    margin-top: 20px;
+  }
+
+  .infoPregunta {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1em;
+  }
+
+
+  .botonListo {
+    background: black;
+  }
+
+  .botonRegistrarse {
+  }
+
+  .botonA {
+    color:black;
+    width: 100%;
+  }
+  .botonB {
+    color: white;
+    width: 100%;
+    background-color: black;
+  }
+
+  .botones {
+    margin-top: 20%;
+    margin-bottom: 40%;
+  }
+  /*Resposnive de la parte de registracion*/
+  #nombreApellidoRegistro, #nombreUsuarioRegistro, #emailRegistro, #contraseñaRegistro {
+    border-bottom: black 1px solid;
+    width: 200px;
+    padding: 10px;
+    font-size: 20px;
+  }
+}
+/*Termina css de la parte del login y registracion*/
+
+
+/*Empieza css de la parte de Faq*/
+
+
+
+.bodyFaq {
+  background-color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+.encabezadoGris {
+  background-color: #C0BFBF;
+  margin: auto;
+  margin-bottom: 100px;
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px;
+}
+
+.titulo {
+  font-family: 'Arvo', serif;
+  font-size: 1.2em;
+  width: 140px;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  margin-top: 10px;
+}
+
+
+.buscadorPalabra {
+  outline: 0;
+  border:0;
+  vertical-align:baseline;
+  background:transparent;
+  text-align: center;
+  width: 200px;
+  border-bottom: 3px solid white;
+  font-weight: bold;
+  color: white;
+  text-align: left;
+  font-size: 1.2em;
+  position: relative;
+}
+
+.buscadorForm {
+  color: white;
+  position: relative;
+  margin-top: 40px;
+}
+
+.accordion {
+  margin-bottom: 100px;
+}
+
+
+.card-header {
+  background-color: black;
+  border-bottom: 5px white solid;
+  text-align: center;
+  font-family: 'Arvo', serif;
+}
+
+.btn-link {
+  color: white;
+  text-transform: uppercase;
+}
+
+.pftitulo {
+  font-family: 'Arvo', serif;
+  color: #DFDEDE;
+  padding: 20px;
+  text-align: center;
+  background-color: black;
+  font-size: 20px;
+}
+
+.preguntasfrecuentes {
+  background-color: white;
+  border: 2px solid black;
+}
+
+.adentroPreguntasFrecuentes{
+  padding: 20px;
+}
+
+.pregunta {
+  color: black;
+  border-bottom: solid 3px #DFDEDE;
+  padding: 10px;
+  font-weight: bold;
+}
+
+@media query (max-width: 768px) {
+  /*Resposnive de faq*/
+    .buscadorPalabra {
+      width: 100px;
+      border-bottom: 3px solid white;
+      font-size: 1.2em;
+      position: relative;
+    }
+
+    .buscadorForm {
+      width: 30%;
+    }
+
+    .infoPreguntasFaq {
+      font-size: 10px;
+    }
+
+    .listasFaq {
+      list-style: none;
+      font-size: 10px;
+      width: 100%;
+      padding: 0;
+    }
+
+    .preguntasfrecuentes {
+      margin: 20px;
+      border: 1px solid black;
+      font-size: 10px;
+    }
+
+    .adentroPreguntasFrecuentes {
+      padding: 10px;
+    }
+
+    .pregunta {
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .infoAcordion {
+      font-size: 10px;
+      padding: 5px;
+    }
+}
+
+
+/*Empieza css de la home*/
+
+.carusel{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contenedor_publicaciones {
+  max-width: 750px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.publicacion1 {
+  background-color: black;
+  font-family: 'Arvo', serif;
+}
+.publicacion, .publicacion1 {
+  width: 235px;
+  height: 235px;
+  flex: wrap;
+  margin-top: 25px;
+}
+
+.publicacion img{
+  width: 235px;
+}
+.info_publicacion {
+  margin: auto;
+  text-align: center;
+}
+
+#patita {
+  color: white;
+  font-size: 6em;
+  margin-top: 15px;
+}
+
+.boton_publicacion {
+  outline: 0;
+  border:0;
+  vertical-align:baseline;
+  background:transparent;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 10px;
+  color: black;
+  font-size: 12px;
+  background-color: white;
+  margin: auto;
+  display: block;
+}
+
+.invitacion_publicacion {
+  color: white;
+  font-size: 1em;
+
+}
+
+.texto_publicacion {
+  background-color: rgba(106, 106, 106, 0.7);
+  position: relative;
+  z-index: 2;
+  top: 150px;
+  height: 110px;
+  padding: 10px;
+}
+
+.usuario_publicacion {
+  font-size: 0.6em;
+  color: white;
+  margin-top: 10px;
+}
+
+.bajada_publicacion {
+  font-size: 0.7em;
+  font-family: 'Arvo', serif;
+  font-weight: bold;
+  color: black;
+  margin-top: -10px;
+}
+
+.etiquetas {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 200px;
+  position: relative;
+  bottom: 15px;
+
+}
+
+.etiquetas_publicacion {
+  font-size: 0.5em;
+  color: #C0BFBF;
+  text-transform: uppercase;
+  font-weight: lighter;
+
+
+}
+
+#etiquetita {
+  color: #C0BFBF;
+  font-size: 0.5em;
+  padding: 5px;
+}
+
+@media query (max-width: 768px) {
+  /*Resposnive de home*/
+
+  .contenedor_publicaciones {
+    max-width: 70%;
+    justify-content: space-around;
+  }
+
+}
+
+/*Termina css Home*/
+
+/*Empieza css del perfil*/
+
+.body_perfil{
+  background-color: #DFDEDE
+}
+
+.container_encabezado{
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 40px;
+  justify-content: center;
+  margin: auto;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 20px;
+  border-bottom: 1px black solid;
+}
+
+.container_encabezado img{
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+}
+
+.encabezado_informacion {
+  font-family: Raleway, sans-serif;
+  max-width: 1080px;
+  margin-bottom: 20px;
+  padding: 15px;
+  margin-right: 10%;
+}
+
+.nombre_de_usuario {
+  font-size: 0.8em;
+}
+
+.descripcion {
+  font-size: 0.8em;
+  font-weight: lighter;
+  color: gray;
+}
+
+.razas ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.razas li {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 3px;
+}
+
+.seguidores_numeros {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 5px;
+  margin: auto;
+}
+
+.seguidores_seguidos_publicaciones_blanco ul, .seguidores_seguidos_publicaciones ul {
+  list-style: none;
+  padding: 0;
+  font-family: Raleway, sans-serif;
+  margin: auto;
+}
+
+.seguidores_seguidos_publicaciones_blanco li, .seguidores_seguidos_publicaciones li{
+  font-size: 0.8em;
+  padding: 10px;
+}
+
+.seguidores_seguidos_publicaciones_blanco{
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.seguidores_seguidos_publicaciones li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+.primero {
+    border-bottom: 1px solid black;
+}
+
+.tercero {
+  border-top: 1px solid black;
+}
+
+.opciones_perfil{
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 20px;
+
+}
+.opciones_perfil ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0px;
+}
+
+.opciones_perfil li{
+  text-transform: uppercase;
+  margin: auto;
+}
+
+.seguidores, .seguidos{
+  font-family: Raleway, sans-serif;
+  font-size: 0.8em;
+  font-weight: lighter;
+  padding: 10px;
+}
+
+.publicaciones{
+  font-family: Raleway, sans-serif;
+  font-size: 0.8em;
+  font-weight: bolder;
+  background-color: white;
+  padding: 10px;
+}
+
+.opciones_perfil ul li{
+  list-style: none;
+  margin: 0px;
+}
+
+.publicaciones_perfil{
+  max-width: 1000px;
+  margin-left: 20%;
+  margin-right: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.publicaciones_imagen_perfil {
+  width: 270px;
+  height: 270px;
+  margin-top: 20px;
+}
+
+.publicaciones_imagen_perfil img {
+  width: 270px;
+  height: 270px;
+}
+
+.texto_extra{
+    margin-top: 40px;
+}
+
+.texto_extra ul li{
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+.fecha {
+  font-family: Raleway, sans-serif;
+  font-size: 0.8em;
+}
+
+.nombre {
+  font-family: Arvo, sans-serif;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.logo img{
+  width: 20%;
+}
+
+
+
+@media (max-width: 768px) {
+  /*Resposnive de perfil*/
+
+  .razas li {
+    display: inline-block;
+  }
+
+  .descripcion {
+    font-size: 0.7em;
+    max-width: 800px;
+  }
+
+  .container_encabezado img{
+    margin-top: 40px;
+  }
+
+  .opciones_perfil {
+    font-size: 60%;
+  }
+
+  .logo img{
+    width: 40%;
+  }
+
+
+}
+
+@media (max-width: 420px) {
+
+  .opciones_perfil {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .publicaciones {
+    margin: auto;
+  }
+
+  .seguidores, .seguidos {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 1027px) {
+  .seguidores_numeros {
+    display: none;
+  }
+
+  .seguidores_seguidos_publicaciones_blanco ul, .seguidores_seguidos_publicaciones ul {
+    display: none;
+  }
+
+
+  .seguidores_seguidos_publicaciones li {
+    display: none;
+  }
+
+  .primero {
+      display: none;
+  }
+
+  .tercero {
+      display: none;
+  }
+
+}
+
+
+
+
+
+/*Termina css del perfil*/
+
+/*Empieza css del timeline*/
+
+.publicaciones_timeline{
+  max-width: 700px;
+  margin-left: 20%;
+  margin-right: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin: auto;
+}
+
+.publicacion_timeline1{
+  width: 665px;
+  height: 250px;
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.publicacion_timeline1 img{
+  width: 600px;
+  height: 250px;
+}
+
+.publicacion_timeline{
+  width: 310px;
+  height: 250px;
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: nowrap;
+
+
+}
+.parte_negra{
+  background-color: black;
+  width: 60px;
+  height: 250px;
+
+
+}
+
+.imagen_timeline{
+  width: 250px;
+  height: 250px;
+
+}
+
+.parte_negra ul{
+  list-style: none;
+  margin-right:  0px;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin: auto;
+}
+.likear {
+  margin-top: 5px;
+}
+
+.compartir{
+  margin-top: 115px;
+}
+
+
+@media query (max-width: 768px) {
+  /*Resposnive de timeline*/
+
+
+
+}
+
+@media only screen and (max-width: 768px) {
+  .publicacion_timeline1 {
+    display: none;
+  }
+
+}

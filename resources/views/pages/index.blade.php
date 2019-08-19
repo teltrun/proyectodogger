@@ -1,6 +1,6 @@
 @extends('layouts/app')
 
-@section('app')
+@section('content')
     <div class="container">
         Index
     </div>
