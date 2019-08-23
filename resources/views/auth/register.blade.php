@@ -3,11 +3,11 @@
 @section('content')
 <div class="bodyRegistro">
   <div class="container">
-      <div class="col-xl-8 col-md-12 informacionRegistrarse">
-        <div class=tituloRegistrarse>Registrarse</div>
-          <div class="formulariosRegistro">
-            <form class="form-horizontal" method="POST" action="{{ route('register') }}">
-                  {{ csrf_field() }}
+    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+          {{ csrf_field() }}
+        <div class="col-xl-8 col-md-12 informacionRegistrarse">
+          <div class=tituloRegistrarse>Registrarse</div>
+            <div class="formulariosRegistro">
                 <!-- Nombre y Apellido -->
                 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                     <div>
@@ -65,8 +65,8 @@
           <div>
             <button type="submit" class="botonA">Registrar</button>
           </div>
-        </div>
-      </form>
+            </div>
+          </form>
         </div>
       </div>
 @endsection

@@ -3,11 +3,11 @@
 @section('content')
 <div class="bodyInicioSesion">
   <div class="container">
-      <div class="col-xl-8 col-sm-12 informacionInicioSesion">
-        <div class="tituloIniciarSesion">Iniciar Sesión</div>
-          <div class="formulariosInicioSesion">
-            <form class="usuario" method="POST" action="{{ route('login') }}">
+    <form class="usuario" method="POST" action="{{ route('login') }}">
                   {{ csrf_field() }}
+        <div class="col-xl-8 col-sm-12 informacionInicioSesion">
+          <div class="tituloIniciarSesion">Iniciar Sesión</div>
+            <div class="formulariosInicioSesion">
               <!--Email de usuario-->
               <div class="subtitulos{{ $errors->has('email') ? ' has-error' : '' }}">
                 <label class= "subtiutlos" for="email">
@@ -54,6 +54,6 @@
                 </div>
               </div>
             </form>
-          </div>
+        </div>
     </div>
 @endsection
