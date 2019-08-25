@@ -8,10 +8,10 @@
           <div class="formulariosRegistro">
             <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                   {{ csrf_field() }}
-                <!-- Nombre y Apellido -->
+                <!-- Nombre -->
                 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                     <div>
-                      <input id="nombreApellidoRegistro" type="text" placeholder="nombre y apellido" name="name" value="{{ old('name') }}" required autofocus>
+                      <input id="nombreApellidoRegistro" type="text" placeholder="Nombre" name="name" value="{{ old('name') }}" required autofocus>
                       @if ($errors->has('name'))
                         <span class="help-block">
                           <strong>{{ $errors->first('name') }}</strong>
@@ -19,13 +19,25 @@
                       @endif
                   </div>
                 </div>
+                <!-- Apellido -->
+
+                <div class="form-group{{ $errors->has('surname') ? ' has-error' : '' }}">
+                  <div>
+                    <input id="nombreApellidoRegistro" type="text" placeholder="Apellido" name="surname" value="{{ old('surname') }}" required autofocus>
+                    @if ($errors->has('surname'))
+                      <span class="help-block">
+                        <strong>{{ $errors->first('surname') }}</strong>
+                      </span>
+                    @endif
+                </div>
+              </div>
                 <!-- Nombre de usuario -->
                 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                     <div>
-                      <input id="nombreUsuarioRegistro" type="text" placeholder="nombre de usuario" name="alias" value="{{ old('alias') }}" required>
-                        @if ($errors->has('alias'))
+                      <input id="nombreUsuarioRegistro" type="text" placeholder="nombre de usuario" name="nick" value="{{ old('nick') }}" required>
+                        @if ($errors->has('nick'))
                           <span class="help-block">
-                            <strong>{{ $errors->first('alias') }}</strong>
+                            <strong>{{ $errors->first('nick') }}</strong>
                           </span>
                         @endif
                   </div>
@@ -58,15 +70,17 @@
                       <input id= "contraseñaRegistro"  type="password"  placeholder="confirmar contraseña"name="password_confirmation" required>
                     </div>
                   </div>
-            </div>
-          </div>
-          <!-- Boton Registrarse -->
-          <div class="botones">
-          <div>
-            <button type="submit" class="botonA">Registrar</button>
-          </div>
-        </div>
-      </form>
-        </div>
+                      <!-- Boton Registrarse -->
+                 <div class="botones">
+                  <div>
+                      <button type="submit" class="botonA">Registrar</button>
+                   </div>
+                </div>
+              </form>
+                 </div>
+                
       </div>
+
+  </div>
+</div>
 @endsection

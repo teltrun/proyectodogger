@@ -45,15 +45,16 @@
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <!--Boton-->
+                   <!--Boton-->
               <div class="botones">
                 <div>
                   <button type="submit" class="botonB">Iniciar Sesion</button>
                 </div>
               </div>
             </form>
+                </div>
+              </div>
+             
           </div>
     </div>
 @endsection

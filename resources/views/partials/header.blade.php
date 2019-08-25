@@ -28,15 +28,49 @@
     </div>
     <!-- Logo -->
     <div class="header_medio">
-      <img class="imagen_logo"src="img/logo@2x.png" alt="Logo Dogger">
+      <img class="imagen_logo"src="{{ asset('img/logo@2x.png') }}" alt="Logo Dogger">
     </div>
     <!-- Botones de registro y login -->
-    <div class="header_derecha">
-      <ul>
-        <li><a class="boton_perfil" href= "{{ route ('login')}}">Iniciar Sesion</a></li>
-        <li><a class="boton_registrarse" href= "{{ route ('register')}}">Registrarse</a></li>
+    <div class="collapse navbar-collapse header_derecha" id="app-navbar-collapse">
+      <!-- Left Side Of Navbar -->
+      <ul class="nav navbar-nav">
+          &nbsp;
       </ul>
-    </div>
+
+      <!-- Right Side Of Navbar -->
+      <ul class="nav navbar-nav navbar-right">
+          <!-- Authentication Links -->
+          @if (Auth::guest())
+              <li><a class="boton_perfil" href="{{ route('login') }}">Login</a></li>
+              <li><a class="boton_registrarse" href="{{ route('register') }}">Register</a></li>
+          @else
+              <li class="dropdown">
+                  <a class="boton_registrarse" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                      {{ Auth::user()->name }} <span class="caret"></span>
+                  </a>
+
+                  <ul class="dropdown-menu" role="menu">
+                    <li>
+                    <a href="/config">
+                        Modificar Perfil
+                        </a>
+                    </li>
+                      <li>
+                          <a href="{{ route('logout') }}"
+                              onclick="event.preventDefault();
+                                       document.getElementById('logout-form').submit();">
+                              Cerrar sesion
+                          </a>
+
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                              {{ csrf_field() }}
+                          </form>
+                      </li>
+                  </ul>
+              </li>
+          @endif
+      </ul>
+  </div>
   </div>
   @if (Auth::check())
     <div class="menu_lateral_derecha">

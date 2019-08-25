@@ -52,9 +52,7 @@
 	text-decoration: none;
 	border: none;
 	outline: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+
 }
 
 .header_derecha  {
@@ -421,6 +419,11 @@ transform: translateX(-50px);
   padding: 8px;
 }
 
+#campoPerfil{
+  float: right;
+  width: 65%;
+}
+
 /*Tipografia del formulario*/
 #nombre, #password{
   margin-top: 20px;
@@ -443,8 +446,9 @@ transform: translateX(-50px);
 
 
 .fotoPerfil {
-  width: auto;
-  padding-bottom: 10px;
+  
+  width: 55px
+
 }
 
 .campoPerfil{
@@ -580,7 +584,7 @@ transform: translateX(-50px);
     margin-bottom: 10px;
   }
   /*Resposnive de la parte de registracion*/
-  #nombreApellidoRegistro, #nombreUsuarioRegistro, #emailRegistro, #contraseñaRegistro {
+  #nombreApellidoRegistro, #fotoUsuarioRegistro, #nombreUsuarioRegistro, #emailRegistro, #contraseñaRegistro {
     border-bottom: black 1px solid;
     width: 200px;
     padding: 10px;
