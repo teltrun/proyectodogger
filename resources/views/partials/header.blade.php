@@ -86,6 +86,7 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+    <form method="post" action="upload.php" enctype="multipart/form-data" id="uploadForm">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Nuevo Post</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -93,20 +94,29 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
           <div class="form-group avatarMenu">
             @include('partials.avatar')
           </div>
+          <div class="form-group" id="contenedor-foto">
+              <label for="subirFoto" class="col-form-label subirFoto">
+                  <img src="{{ route('user.foto', ['user' => 'default', 'filename' => 'perro_camara.jpg' ]) }}" />
+                  <br> Subir foto
+              </label>
+              <input id="subirFoto" name='subirFoto' style="display:none;" type="file">
+            </div>
+            <div class="previewPost">
+
+            </div>
           <div class="form-group">
             <label for="message-text" class="col-form-label">Comentario:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
-        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Crear post</button>
+        <button type="submit" class="btn btn-primary">Crear post</button>
       </div>
+    </form>
     </div>
   </div>
 </div>
