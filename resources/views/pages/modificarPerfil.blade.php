@@ -15,12 +15,8 @@
             <div class="cambiarFoto">
                 <div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
                     <div>
-                        <label for="campoPerfil">
-                            @if(Auth::user()->image)
-                                <img src="{{ route('user.foto', ['user' => Auth::user()->nick, 'filename' => Auth::user()->image]) }}" class="fotoPerfil" />
-                            @else
-                                <img src="{{ route('user.foto', ['user' => 'default', 'filename' => '123.jpg']) }}" class="fotoPerfil" />
-                            @endif
+                        <label class="campoPerfil" for="campoPerfil">
+                            @include('partials/avatar')
                             <br>
                             Cambiar foto
                         </label>
