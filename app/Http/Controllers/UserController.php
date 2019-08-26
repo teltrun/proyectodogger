@@ -23,17 +23,29 @@ class UserController extends Controller
             'surname' => 'required|string|max:255',
             'nick' => 'required|string|max:50|unique:users,nick,'.$id,
             'email' => 'required|string|email|max:255|unique:users,email,'.$id,
+            'description' => 'max:255',
+            'genre' => 'max:50',
+            'phone' => 'integer',
+
         ]);
 
         $name = $request->input('name');
         $surname = $request->input('surname');
         $nick = $request->input('nick');
         $email = $request->input('email');
+        $description = $request->input('description');
+        $genre = $request->input('genre');
+        $phone = $request->input('phone');
+
 
         $user->name = $name;
         $user->surname = $surname;
         $user->nick = $nick;
         $user->email = $email;
+        $user->description = $description;
+        $user->genre = $genre;
+        $user->phone = $phone;
+
 
         //Subir foto de perfil
         $image = $request->file('image');
