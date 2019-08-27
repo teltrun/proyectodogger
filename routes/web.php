@@ -40,9 +40,7 @@ Route::get('/', function () {
     return view('pages/index');
 });
 
-Route::get('/perfil', function () {
-    return view('pages/perfil');
-});
+Route::get('/perfil', 'UserController@Perfil');
 
 Route::get('/config', 'UserController@config')->middleware('auth');
 Route::post('/config', 'UserController@update')->name('user.update');
@@ -53,6 +51,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/user/foto/{user}/{filename}', 'UserController@getImage')->name('user.foto');
+Route::get('/user/posts/{user}/{filename}', 'PostController@getPosts')->name('user.posts');
 
 
 

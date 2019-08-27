@@ -31,8 +31,8 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/func.js') }}"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/func.js"></script>
 
 </body>
 </html>

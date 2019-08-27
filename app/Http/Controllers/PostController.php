@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Auth\Access\Response;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use App\Post;
@@ -26,7 +27,7 @@ class PostController extends Controller
 
         if($image){
             $filename = $image->getClientOriginalName();
-            Storage::disk('posts')->put($user->id.'/'.$filename, File::get($image));
+            Storage::disk('posts')->put($user->nick.'/'.$filename, File::get($image));
             $post->image_path = $filename;
         }
 
@@ -37,6 +38,9 @@ class PostController extends Controller
 
     }
     
+    public function getPosts($user, $filename){
+        $file = Storage::disk('posts')->get($user.'/'.$filename);
+        return new Response($file, 200);
+    }   
+
 }
-
-

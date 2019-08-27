@@ -6,13 +6,28 @@ use Illuminate\Http\Request;
 use Illuminate\Auth\Access\Response;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use App\Post;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
+    public function perfil()
+    {
+        $posts = Post::where('user_id', \Auth::user()->id)->get();
+                    
+        return view('pages/perfil')->with(['posts' => $posts]);
+    }
+    
     public function config(){
 
         return view('pages/modificarPerfil');
     }
+
+
 
     public function update(Request $request){
         $user = \Auth::user();
