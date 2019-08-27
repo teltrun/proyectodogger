@@ -32,8 +32,8 @@ Route::get('/', function () {
     //     echo "Likes: ".count($post->likes);
 
     //     echo '<hr>';
-        
-        
+
+
     // }
     // die;
 
@@ -57,4 +57,7 @@ Route::get('/user/posts/{user}/{filename}', 'PostController@getPosts')->name('us
 
 Route::get('/faq', function () {
     return view('pages/faq');
+});
+Route::get('/timeline', function () {
+    return view('pages/timeline');
 });
