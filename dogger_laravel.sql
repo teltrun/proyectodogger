@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 26-08-2019 a las 11:45:34
--- Versión del servidor: 5.7.26
--- Versión de PHP: 7.2.18
+-- Tiempo de generación: 27-08-2019 a las 14:37:10
+-- Versión del servidor: 5.7.24
+-- Versión de PHP: 7.2.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_posts_users` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `posts`
@@ -110,7 +110,8 @@ INSERT INTO `posts` (`id`, `user_id`, `image_path`, `description`, `created_at`,
 (5, 1, 'roma.jpg', 'dexcripcion de la imagen', '2019-08-24 11:32:06', '2019-08-24 11:32:06'),
 (6, 2, 'paris.jpg', 'dexcripcion de la imagen', '2019-08-24 11:32:06', '2019-08-24 11:32:06'),
 (7, 3, 'corrientes.jpg', 'dexcripcion de la imagen', '2019-08-24 11:32:06', '2019-08-24 11:32:06'),
-(8, 2, 'venecia.jpg', 'dexcripcion de la imagen', '2019-08-24 11:32:06', '2019-08-24 11:32:06');
+(8, 2, 'venecia.jpg', 'dexcripcion de la imagen', '2019-08-24 11:32:06', '2019-08-24 11:32:06'),
+(9, 9, '09.png', 'asdasd', '2019-08-27 14:31:07', '2019-08-27 14:31:07');
 
 -- --------------------------------------------------------
 
@@ -149,7 +150,7 @@ INSERT INTO `users` (`id`, `name`, `surname`, `nick`, `email`, `password`, `imag
 (6, 'German', 'Ojeda', 'asdasd', 'germaasdnojeda83@gmail.com', '$2y$10$Ty6Msk/vzfOt5.oZH4N7OOln/IAkguT2Jk9nI1ADM3UNXFoJCfR5.', NULL, NULL, NULL, NULL, '2019-08-25 13:53:57', '2019-08-25 13:53:57', 'lmZxhNhOeF6DMs39YqQXm3agVTrfsOw7ktEJoBTzr0goXDuTqVo6hcgOxLMe'),
 (7, 'German', 'Ojeda', 'aaa', 'germanaaojeda83@gmail.com', '$2y$10$MhRowD3JWwfWKp75AZkABuGXcdlpdHGjhiqV.Lu4XS62nRTByvT3i', NULL, NULL, NULL, NULL, '2019-08-25 13:54:52', '2019-08-25 13:54:52', '5jYJOZ4CguGWAL44DhWN2UXubqdu4AWB7xcuYHv1oeUDHMpmomBf7PBvr0qF'),
 (8, 'Yanina', 'Villalba', 'yanina', 'asd@asd.com', '$2y$10$uPbLd2HJF4LK6OJjB6ndleb1AZOOfQZDYxMGr5/zRSjsFAHNoHmfi', 'perfil_logo_1.gif', NULL, NULL, NULL, '2019-08-25 14:46:53', '2019-08-25 15:17:05', NULL),
-(9, 'German', 'Ojeda', 'italia', 'gojeda@megatlon.com.ar', '$2y$10$STMW/jCW0dRSgzb6/oKg3u/03s6xi.FH5NND.kJGZwgA2sz/1VAqC', 'perfil_20160401-4-1752-Foto-de-perfil-para-redes-sociales-y-curriculum-Madrid-.jpg', 'Hola', 'masculino', 11223344, '2019-08-25 21:57:03', '2019-08-25 22:54:00', NULL);
+(9, 'German', 'Ojeda', 'italia', 'gojeda@megatlon.com.ar', '$2y$10$STMW/jCW0dRSgzb6/oKg3u/03s6xi.FH5NND.kJGZwgA2sz/1VAqC', 'perfil_20160401-4-1752-Foto-de-perfil-para-redes-sociales-y-curriculum-Madrid-.jpg', 'Hola', 'masculino', 11223344, '2019-08-25 21:57:03', '2019-08-25 22:54:00', 'dtWE215PokjwkJ09jSBp0nj3zaEHao9VnWwvpQXjdCfHd5lp0Ab9xyTJYspJ');
 
 --
 -- Restricciones para tablas volcadas
