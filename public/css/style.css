@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
 }
+
 .footer {
   height: 300px;
   color: grey;
@@ -13,23 +14,22 @@
   background-color: white;
   border-bottom: black 2px solid;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
   min-width: 100%;
 }
 
 .header_izquierda {
-  margin-left: 20px;
   margin: auto;
-  min-width: 20%;
   padding: 20px;
 }
 
 
 .header_medio {
-  flex-wrap: wrap;
+  display: flex;
   margin:auto;
   justify-content: center;
-  min-width: 60%;
+  flex-wrap: wrap;
 }
 
 .material-icons lupa {
@@ -335,6 +335,7 @@ transform: translateX(-50px);
 
 
 /*Empieza css de la parte del login y registracion*/
+
 .bodyRegistro, .bodyInicioSesion {
   background-color: black;
 }
@@ -348,13 +349,13 @@ transform: translateX(-50px);
 /*Caja Blanca*/
 .informacionInicioSesion {
   background-color: white; /*Fondo Blanco*/
-  width: 700px;
+  max-width: 700px;
   margin-top: 70px;
 }
 
 .informacionRegistrarse {
   background-color: white; /*Fondo Blanco*/
-  width: 700px;
+  max-width: 700px;
   margin-top: 70px;
 }
 
@@ -579,6 +580,7 @@ transform: translateX(-50px);
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
   /*Resposnive de la parte de registracion*/
   #nombreApellidoRegistro, #nombreUsuarioRegistro, #emailRegistro, #contraseñaRegistro {
     border-bottom: black 1px solid;
