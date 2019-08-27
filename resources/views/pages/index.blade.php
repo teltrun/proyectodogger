@@ -31,7 +31,7 @@
         <div class="info_publicacion">
           <i id="patita" class="material-icons">pets</i>
           <p class= invitacion_publicacion>¡Sumate a nosotros y subí fotos de tus perros!</p>
-          <form class="" action="registrarse.php" method="post">
+          <form class="" action="register" method="get">
             <button class= "boton_publicacion" type="submit" name="button">Registrarse</button>
           </form>
         </div>
