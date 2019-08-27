@@ -754,6 +754,7 @@ transform: translateX(-50px);
   height: 235px;
   flex: wrap;
   margin-top: 25px;
+  position: relative;
 }
 
 .publicacion img{
@@ -795,7 +796,7 @@ transform: translateX(-50px);
 
 .texto_publicacion {
   background-color: rgba(106, 106, 106, 0.7);
-  position: relative;
+  position: absolute;
   z-index: 2;
   top: 150px;
   height: 110px;
@@ -821,9 +822,8 @@ transform: translateX(-50px);
   flex-wrap: wrap;
   justify-content: space-between;
   width: 200px;
-  position: relative;
   bottom: 15px;
-
+  position: absolute;
 }
 
 .etiquetas_publicacion {
@@ -831,8 +831,7 @@ transform: translateX(-50px);
   color: #C0BFBF;
   text-transform: uppercase;
   font-weight: lighter;
-
-
+  position: absolute;
 }
 
 #etiquetita {
