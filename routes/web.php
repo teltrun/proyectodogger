@@ -46,6 +46,7 @@ Route::get('/perfil', function () {
 
 Route::get('/config', 'UserController@config')->middleware('auth');
 Route::post('/config', 'UserController@update')->name('user.update');
+Route::post('/savePost', 'PostController@save')->name('post.save');
 
 
 Auth::routes();
