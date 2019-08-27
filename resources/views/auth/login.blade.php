@@ -5,9 +5,9 @@
   <div class="container">
     <form class="usuario" method="POST" action="{{ route('login') }}">
                   {{ csrf_field() }}
+      <div class="formulariosInicioSesion">
         <div class="col-xl-8 col-sm-12 informacionInicioSesion">
           <div class="tituloIniciarSesion">Iniciar Sesión</div>
-            <div class="formulariosInicioSesion">
               <!--Email de usuario-->
               <div class="subtitulos{{ $errors->has('email') ? ' has-error' : '' }}">
                 <label class= "subtiutlos" for="email">
@@ -18,9 +18,9 @@
                           <strong>{{ $errors->first('email') }}</strong>
                         </span>
                       @endif
-                    </div>
-                  </label>
-                </div>
+                  </div>
+                </label>
+              </div>
                 <!--Contraseña-->
                 <div class="usuario{{ $errors->has('password') ? ' has-error' : '' }}">
                   <label class="subtitulos" for="password">
@@ -45,16 +45,15 @@
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
                    <!--Boton-->
               <div class="botones">
                 <div>
                   <button type="submit" class="botonB">Iniciar Sesion</button>
                 </div>
               </div>
-            </form>
-                </div>
-              </div>
-             
-          </div>
+          </form>
+      </div>
     </div>
 @endsection

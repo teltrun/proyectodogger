@@ -40,7 +40,7 @@
               <li><a class="boton_registrarse" href="{{ route('register') }}">Register</a></li>
           @else
           <li>@include('partials.avatar')</li>
-          
+
               <li class="dropdown">
                   <a class="boton_registrarse" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                       {{ Auth::user()->name }} <span class="caret"></span>

@@ -4,10 +4,7 @@
   box-sizing: border-box;
 }
 
-.footer {
-  height: 300px;
-  color: grey;
-}
+
 /*Empieza css del header*/
 
 .contenedor_header {
@@ -155,6 +152,15 @@ transform: translateX(-50px);
   display: none;
 }
 
+.modificarPerfil {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: white; /*Fondo Blanco*/
+  width: 700px;
+  margin-top: 70px;
+}
+
 
 @media screen and (min-width: 768px) {
   .header_hamburguesa {
@@ -293,10 +299,12 @@ transform: translateX(-50px);
 
 /*Empieza css del footer*/
 
-
+.footer {
+  height: 300px;
+  color: grey;
+}
 
 .containerFooter{
-  height: 30px;
   position: fixed;
   bottom: 0;
   text-align: center;
@@ -355,32 +363,23 @@ transform: translateX(-50px);
   background-color: white; /*Fondo Blanco*/
   max-width: 700px;
   margin-top: 70px;
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
 
 .informacionRegistrarse {
   background-color: white; /*Fondo Blanco*/
   max-width: 700px;
   margin-top: 70px;
-}
+  padding-bottom: 80px;
 
-.modificarPerfil {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  background-color: white; /*Fondo Blanco*/
-  width: 700px;
-  margin-top: 70px;
 }
 
 /*General*/
 .formulariosRegistro {
   margin: auto;
   text-align: center;
-  margin-top: 60px;
   padding-bottom: 80px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 .checkbox {
   display: flex;
@@ -401,11 +400,7 @@ transform: translateX(-50px);
 
 .formulariosInicioSesion {
   margin: auto;
-  max-width: 500px;
   text-align: center;
-  margin-top: 80px;
-  padding:0px;
-  margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -509,7 +504,7 @@ transform: translateX(-50px);
   font-weight: bolder;
 }
 
-.botonB {
+.botonB, .botonA {
   outline: 0;
   border:0;
   margin-right: 0px;
@@ -528,24 +523,6 @@ transform: translateX(-50px);
   margin-bottom: 100px;
 }
 
-.botonA {
-  outline: 0;
-  border:0;
-  margin-right: 0px;
-  margin-left: 0px;
-  vertical-align:baseline;
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  padding: 10px;
-  color: black;
-  font-size: 12px;
-  background: white;
-  width: 700px;
-  margin-top: 50px;
-  margin-bottom: 100px;
-}
 
 #repetirContrasenia{
   margin-bottom: 70px;
@@ -592,18 +569,13 @@ transform: translateX(-50px);
     font-size: 1em;
   }
 
-  .botonA {
+  .botonA, .botonB {
     color: white;
     width: 100%;
     background-color: black;
     margin-top: 0px;
   }
-  .botonB {
-    color: white;
-    width: 100%;
-    background-color: black;
-    margin-top: 0px;
-  }
+
 
   .botones {
     margin-top: 10px;

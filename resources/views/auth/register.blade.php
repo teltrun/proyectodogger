@@ -3,15 +3,15 @@
 @section('content')
 <div class="bodyRegistro">
   <div class="container">
-      <div class="col-xl-8 col-md-12 informacionRegistrarse">
-        <div class=tituloRegistrarse>Registrarse</div>
-          <div class="formulariosRegistro">
-            <form class="form-horizontal" method="POST" action="{{ route('register') }}">
-                  {{ csrf_field() }}
+    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+          {{ csrf_field() }}
+      <div class="formulariosRegistro">
+        <div class="col-xl-8 col-md-12 informacionRegistrarse">
+          <div class=tituloRegistrarse>Registrarse</div>
                 <!-- Nombre -->
                 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                     <div>
-                      <input id="nombreApellidoRegistro" type="text" placeholder="Nombre" name="name" value="{{ old('name') }}" required autofocus>
+                      <input id="nombreApellidoRegistro" type="text" placeholder="nombre" name="name" value="{{ old('name') }}" required autofocus>
                       @if ($errors->has('name'))
                         <span class="help-block">
                           <strong>{{ $errors->first('name') }}</strong>
@@ -23,7 +23,7 @@
 
                 <div class="form-group{{ $errors->has('surname') ? ' has-error' : '' }}">
                   <div>
-                    <input id="nombreApellidoRegistro" type="text" placeholder="Apellido" name="surname" value="{{ old('surname') }}" required autofocus>
+                    <input id="nombreApellidoRegistro" type="text" placeholder="apellido" name="surname" value="{{ old('surname') }}" required autofocus>
                     @if ($errors->has('surname'))
                       <span class="help-block">
                         <strong>{{ $errors->first('surname') }}</strong>
@@ -70,17 +70,15 @@
                       <input id= "contraseñaRegistro"  type="password"  placeholder="confirmar contraseña"name="password_confirmation" required>
                     </div>
                   </div>
-                      <!-- Boton Registrarse -->
+              </div>
+                <!-- Boton Registrarse -->
                  <div class="botones">
                   <div>
                       <button type="submit" class="botonA">Registrar</button>
                    </div>
                 </div>
-              </form>
-                 </div>
-                
+              </div>
+          </form>
+        </div>
       </div>
-
-  </div>
-</div>
 @endsection
