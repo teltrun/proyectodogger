@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Auth\Access\Response;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Image;
 use App\Post;
 
 class PostController extends Controller
@@ -26,8 +27,8 @@ class PostController extends Controller
         $post->description = $description;
 
         if($image){
-            $filename = $image->getClientOriginalName();
-            Storage::disk('posts')->put($user->nick.'/'.$filename, File::get($image));
+            $filename = '23'.$image->getClientOriginalName();
+            Image::make($image)->resize(235, 235)->save(storage_path('app/posts/'.$user->nick.'/'.$filename));
             $post->image_path = $filename;
         }
 

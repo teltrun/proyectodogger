@@ -8,8 +8,8 @@
        
         {{ $imagen->users->name }}
 
-        {{-- <div class="">
-            <img src="{{ route('user.posts', ['user' => $imagen->user->nick, 'filename' => $imagen->image_path]) }}" />
+        <div class="publicaciones_timeline">
+            <img src="{{ route('user.posts', ['user' => $imagen->users->nick, 'filename' => $imagen->image_path]) }}" />
             <div class="parte_negra">
               <ul>
                 <li class="comentar"><i class="material-icons">comment</i></li>
@@ -17,7 +17,7 @@
                 <li class="compartir"><i class="material-icons">share</i></li>
               </ul>
             </div>
-          </div> --}}
+          </div>
       @endforeach
       
       

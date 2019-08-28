@@ -14,29 +14,6 @@
 //Use App\Post;
 
 Route::get('/', function () {
-
-    // $posts = Post::all();
-    // foreach ($posts as $post) {
-    //     echo $post->description;
-    //     echo '<br>';
-    //     echo $post->image_path;
-    //     echo '<br>';
-    //     echo $post->users->name;
-    //     echo '<br>';
-    //     echo '<strong>Comentarios</strong><br>';
-    //     foreach ($post->comments as $comment) {
-    //         echo $comment->content . '  Usuario:' . $comment->users->name;
-    //         echo '<br>';
-    //     }
-
-    //     echo "Likes: ".count($post->likes);
-
-    //     echo '<hr>';
-
-
-    // }
-    // die;
-
     return view('pages/index');
 });
 
@@ -58,7 +35,4 @@ Route::get('/user/posts/{user}/{filename}', 'PostController@getPosts')->name('us
 
 
 
-Route::get('/faq', function () {
-    return view('pages/faq');
-});
 
