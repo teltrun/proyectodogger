@@ -33,7 +33,7 @@ class PostController extends Controller
 
         $post->save();
 
-        return redirect('/perfil');
+        return redirect('/perfil')->with(['message' => 'Tu post se ha subido correctamente']);
         
 
     }

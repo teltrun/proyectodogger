@@ -40,6 +40,8 @@ Route::get('/', function () {
     return view('pages/index');
 });
 
+Route::get('/timeline', 'UserController@timeline')->name('timeline');
+
 Route::get('/perfil', 'UserController@Perfil');
 
 Route::get('/config', 'UserController@config')->middleware('auth');
@@ -55,9 +57,8 @@ Route::get('/user/posts/{user}/{filename}', 'PostController@getPosts')->name('us
 
 
 
+
 Route::get('/faq', function () {
     return view('pages/faq');
 });
-Route::get('/timeline', function () {
-    return view('pages/timeline');
-});
+

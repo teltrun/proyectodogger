@@ -13,12 +13,6 @@
       <div class="descripcion">
         <p>{{ Auth::user()->description }}</p>
       </div>
-      <div class="razas">
-        <ul>
-          <li>Labrador</li>
-          <li>Pugg</li>
-        </ul>
-      </div>
     </div>
   </div>
   <div class="seguidores_numeros">
@@ -38,7 +32,13 @@
     </div>
   </div>
 </div>
+
 <div class="opciones_perfil">
+    @if(session('message'))
+    <div class="alert alert-success">
+        {{ session('message') }}
+    </div>
+    @endif
   <ul>
     <li class="seguidores">Seguidores</li>
     <li class="publicaciones">Publicaciones</li>
@@ -46,10 +46,10 @@
   </ul>
 </div>
   <div class="publicaciones_perfil">
-
     @foreach ($posts as $post)
     <div class="publicaciones_imagen_perfil">
       <img src="{{ route('user.posts', ['user' => Auth::user()->nick, 'filename' => $post['image_path']]) }}" />
+      <p>{{ $post['description'] }}</p>
     </div>
     @endforeach
     

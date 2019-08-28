@@ -21,6 +21,14 @@ class UserController extends Controller
                     
         return view('pages/perfil')->with(['posts' => $posts]);
     }
+
+    public function timeline()
+    {
+        $imagenes = Post::orderBy('id', 'desc')->get();
+                    
+        return view('pages/timeline', ['imagenes' => $imagenes]);
+        
+    }
     
     public function config(){
 
