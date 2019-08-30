@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 28-08-2019 a las 11:22:30
+-- Tiempo de generación: 30-08-2019 a las 18:39:28
 -- Versión del servidor: 5.7.26
--- Versión de PHP: 7.2.18
+-- Versión de PHP: 7.3.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -41,16 +41,6 @@ CREATE TABLE IF NOT EXISTS `comments` (
   KEY `fk_comments_posts` (`post_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `comments`
---
-
-INSERT INTO `comments` (`id`, `user_id`, `post_id`, `content`, `created_at`, `updated_at`) VALUES
-(2, 1, 7, 'buena foto', '2019-08-24 11:37:19', '2019-08-24 11:37:19'),
-(3, 2, 7, 'buena Hola', '2019-08-24 11:37:19', '2019-08-24 11:37:19'),
-(4, 3, 1, 'que lindo', '2019-08-24 11:37:19', '2019-08-24 11:37:19'),
-(5, 2, 6, 'bien', '2019-08-24 11:37:19', '2019-08-24 11:37:19');
-
 -- --------------------------------------------------------
 
 --
@@ -69,18 +59,6 @@ CREATE TABLE IF NOT EXISTS `likes` (
   KEY `fk_likes_posts` (`post_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `likes`
---
-
-INSERT INTO `likes` (`id`, `user_id`, `post_id`, `created_at`, `updated_at`) VALUES
-(1, 1, 6, '2019-08-24 11:39:10', '2019-08-24 11:39:10'),
-(2, 2, 1, '2019-08-24 11:39:10', '2019-08-24 11:39:10'),
-(3, 2, 5, '2019-08-24 11:39:10', '2019-08-24 11:39:10'),
-(4, 3, 7, '2019-08-24 11:39:10', '2019-08-24 11:39:10'),
-(5, 3, 2, '2019-08-24 11:39:10', '2019-08-24 11:39:10'),
-(6, 1, 7, '2019-08-24 11:39:10', '2019-08-24 11:39:10');
-
 -- --------------------------------------------------------
 
 --
@@ -97,26 +75,16 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_posts_users` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `posts`
 --
 
 INSERT INTO `posts` (`id`, `user_id`, `image_path`, `description`, `created_at`, `updated_at`) VALUES
-(1, 1, 'image1.jpg', 'dexcripcion de la imagen', '2019-08-24 11:31:20', '2019-08-24 11:31:20'),
-(2, 2, 'image222.jpg', 'dexcripcion de la imagen', '2019-08-24 11:31:20', '2019-08-24 11:31:20'),
-(3, 3, 'image333.jpg', 'dexcripcion de la imagen', '2019-08-24 11:31:20', '2019-08-24 11:31:20'),
-(5, 1, 'roma.jpg', 'dexcripcion de la imagen', '2019-08-24 11:32:06', '2019-08-24 11:32:06'),
-(6, 2, 'paris.jpg', 'dexcripcion de la imagen', '2019-08-24 11:32:06', '2019-08-24 11:32:06'),
-(7, 3, 'corrientes.jpg', 'dexcripcion de la imagen', '2019-08-24 11:32:06', '2019-08-24 11:32:06'),
-(8, 2, 'venecia.jpg', 'dexcripcion de la imagen', '2019-08-24 11:32:06', '2019-08-24 11:32:06'),
-(9, 9, '09.png', 'asdasd', '2019-08-27 14:31:07', '2019-08-27 14:31:07'),
-(10, 9, 'FB_IMG_1450952352348.jpg', 'Sonrisas en el patio', '2019-08-27 22:43:19', '2019-08-27 22:43:19'),
-(11, 9, 'IMG-20150429-WA0013.jpg', 'Lista para salir!', '2019-08-27 22:44:23', '2019-08-27 22:44:23'),
-(12, 9, 'descarga (1).jpg', 'A dormir la siesta', '2019-08-27 22:45:46', '2019-08-27 22:45:46'),
-(13, 9, 'canicross-tierra.png', 'Mantenerse en forma', '2019-08-27 22:46:48', '2019-08-27 22:46:48'),
-(14, 9, 'descarga (1).jpg', 'Otra vez durmiendo', '2019-08-28 01:22:01', '2019-08-28 01:22:01');
+(24, 10, '23Untitled-5.png', 'Prueba 1', '2019-08-29 14:02:46', '2019-08-29 14:02:46'),
+(25, 10, '2332835451.png', 'asdasdasd', '2019-08-29 16:25:30', '2019-08-29 16:25:30'),
+(26, 10, '231109.png', 'sdfsdfs', '2019-08-29 16:45:57', '2019-08-29 16:45:57');
 
 -- --------------------------------------------------------
 
@@ -140,22 +108,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   `updated_at` datetime DEFAULT NULL,
   `remember_token` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `surname`, `nick`, `email`, `password`, `image`, `description`, `genre`, `phone`, `created_at`, `updated_at`, `remember_token`) VALUES
-(1, 'German', 'Ojeda', 'teltrun', 'ger@ger.com', 'pass', NULL, NULL, NULL, NULL, '2019-08-24 11:26:26', '2019-08-24 11:26:26', NULL),
-(2, 'Yanina', 'Villalba', 'yani', 'yani@ger.com', 'pass', NULL, NULL, NULL, NULL, '2019-08-24 11:28:11', '2019-08-24 11:28:11', NULL),
-(3, 'Luis', 'Ojeda', 'luis', 'luis@ger.com', 'pass', NULL, NULL, NULL, NULL, '2019-08-24 11:28:11', '2019-08-24 11:28:11', NULL),
-(4, 'German', 'Ojeda', 'dextroyer1', 'germanojeda83@gmail.com', '$2y$10$/NX3EJac2FgKJ/rTQjkH7e6PawC.qU7ond61oPSGBOCdS/7ldClDm', 'perfil_images.jpg', NULL, NULL, NULL, '2019-08-24 18:33:10', '2019-08-25 21:16:16', 'mc0UEokXvSYb96CBKGHH8QgSG3SNqL8SXAyemABT5qoTITJde2fE9ezqShF7'),
-(5, 'Eduardo', 'Ojeda', 'eljefe', 'jefe@luis.com', '$2y$10$Vzic7V.2hvCC0yDN0Fkz6epk1oMZYuUtGsTBT6wbGYwtVqJOfaxe2', NULL, NULL, NULL, NULL, '2019-08-25 13:46:43', '2019-08-25 13:46:43', 'oBswsiMfFLbLmyogGlPBWtd2HfSCIPJNWU4aINNV6Dha94zcqoyphCgsMhVa'),
-(6, 'German', 'Ojeda', 'asdasd', 'germaasdnojeda83@gmail.com', '$2y$10$Ty6Msk/vzfOt5.oZH4N7OOln/IAkguT2Jk9nI1ADM3UNXFoJCfR5.', NULL, NULL, NULL, NULL, '2019-08-25 13:53:57', '2019-08-25 13:53:57', 'lmZxhNhOeF6DMs39YqQXm3agVTrfsOw7ktEJoBTzr0goXDuTqVo6hcgOxLMe'),
-(7, 'German', 'Ojeda', 'aaa', 'germanaaojeda83@gmail.com', '$2y$10$MhRowD3JWwfWKp75AZkABuGXcdlpdHGjhiqV.Lu4XS62nRTByvT3i', NULL, NULL, NULL, NULL, '2019-08-25 13:54:52', '2019-08-25 13:54:52', '5jYJOZ4CguGWAL44DhWN2UXubqdu4AWB7xcuYHv1oeUDHMpmomBf7PBvr0qF'),
-(8, 'Yanina', 'Villalba', 'yanina', 'asd@asd.com', '$2y$10$uPbLd2HJF4LK6OJjB6ndleb1AZOOfQZDYxMGr5/zRSjsFAHNoHmfi', 'perfil_logo_1.gif', NULL, NULL, NULL, '2019-08-25 14:46:53', '2019-08-25 15:17:05', NULL),
-(9, 'German', 'Ojeda', 'italia', 'gojeda@megatlon.com.ar', '$2y$10$STMW/jCW0dRSgzb6/oKg3u/03s6xi.FH5NND.kJGZwgA2sz/1VAqC', 'perfil_20160401-4-1752-Foto-de-perfil-para-redes-sociales-y-curriculum-Madrid-.jpg', 'Hola', 'masculino', 11223344, '2019-08-25 21:57:03', '2019-08-25 22:54:00', 'wgIAtD6dhKDZ8jHxmnadDY1L6WAwRTNo5o5RlOZMINGmsbDn0zUp73S1kteg');
+(10, 'German', 'Ojeda', 'teltrun', 'germanoccjeda83@gmail.com', '$2y$10$Yv7IS2C7tPOCTWIVX1c3quaMx.w63EplOdNHUtaoX7MJ8pw3PggXu', NULL, NULL, NULL, NULL, '2019-08-29 12:35:44', '2019-08-29 12:35:44', NULL);
 
 --
 -- Restricciones para tablas volcadas
