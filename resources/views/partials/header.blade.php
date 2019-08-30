@@ -70,7 +70,7 @@
     </div>
     <div class="menu_lateral_izquierda">
       <ul>
-        <li><a href="" data-toggle="modal" data-target="#exampleModal"><i class='fas fa-camera'></a></li>
+        <li><a href="" data-toggle="modal" data-target="#exampleModal"><i class='fas fa-camera'></i> </a></li>
       </ul>
     </div>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
