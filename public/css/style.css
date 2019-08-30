@@ -62,6 +62,14 @@
 
 .reg-log-nav > ul > li:hover .drop-nav-reg-log {
   display: flex;
+  background-color: black;
+  padding: 30px;
+  margin-top: 10px;
+}
+
+#linkHeader {
+    color: white;
+
 }
 
 .user-avatar img{
@@ -1203,4 +1211,90 @@ transform: translateX(-50px);
     display: none;
   }
 
+}
+
+  /*Subir Foto*/
+.tamaño_foto{
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+
+.containerSubirFoto {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.modal-content {
+  border-radius: 0 !important;
+  border: black 2px solid !important;
+}
+
+.modal-header {
+  border-bottom: black 2px solid !important;
+  margin-bottom: 10px;
+}
+
+.infoSubirFoto{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.infoCostadoSubirFoto{
+  width: 80%;
+  direction: column;
+  justify-content: space-around;
+}
+.btn {
+  border-radius: 0px !important;
+}
+
+.modal-footer {
+  padding: 0px;
+}
+
+.modal-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.nombreUsuarioSubirFoto {
+  color: lightgray;
+  font-weight: normal;
+}
+
+
+.subirFoto {
+  background-color: gray;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+
+.tamañoFoto {
+  width: 100%;
+}
+
+.form-control {
+  background-clip: none !important;
+  border: 0px !important;
+}
+
+.comentarioSubirFoto {
+
+}
+
+.botonPublicar {
+  background-color: black;
+  font-weight: normal;
+  color: white;
+  text-transform: uppercase;
+  border: 0px;
+  width: 100%;
 }
