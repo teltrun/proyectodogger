@@ -1,4 +1,4 @@
-<header>
+<header class="main-header">
   <!-- Menú Lateral -->
   <?php
     $menuLateralDerecha=[
@@ -18,52 +18,42 @@
         <i class="material-icons hamburguesa">menu</i>
       </div>
     @endif
+
     <div class="header_izquierda">
       <i class="material-icons lupa">search</i>
     </div>
+
     <!-- Logo -->
     <div class="header_medio">
       <img class="imagen_logo"src="{{ asset('img/logo@2x.png') }}" alt="Logo Dogger">
     </div>
-    <!-- Botones de registro y login -->
-    <div class="collapse navbar-collapse header_derecha" id="app-navbar-collapse">
-      <!-- Left Side Of Navbar -->
-      <ul class="nav navbar-nav">
-          &nbsp;
-      </ul>
 
+    <!-- Botones de registro y login -->
+    <div class="reg-log-nav ">
       <!-- Right Side Of Navbar -->
-      <ul class="nav navbar-nav navbar-right avatarMenu">
+      <ul>
           <!-- Authentication Links -->
           @if (Auth::guest())
-              <li><a class="boton_perfil" href="{{ route('login') }}">Login</a></li>
-              <li><a class="boton_registrarse" href="{{ route('register') }}">Register</a></li>
+              <li><a class="boton_perfil" href="{{ route('login') }}">Iniciar Sesión</a></li>
+              <li><a class="boton_registrarse" href="{{ route('register') }}">Registrarse</a></li>
           @else
-          <li>@include('partials.avatar')</li>
 
-              <li class="dropdown">
-                  <a class="boton_registrarse" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                      {{ Auth::user()->name }} <span class="caret"></span>
-                  </a>
+          <li class="user-avatar">@include('partials.avatar')</li>
 
-                  <ul class="dropdown-menu" role="menu">
-                    <li>
-                    <a href="/config">
-                        Modificar Perfil
-                        </a>
-                    </li>
-                      <li>
-                          <a href="{{ route('logout') }}"
-                              onclick="event.preventDefault();
-                                       document.getElementById('logout-form').submit();">
-                              Cerrar sesion
-                          </a>
+          <li>
+              <a class="boton_registrarse" href="#">
+                  {{ Auth::user()->name }} <span class="caret"></span>
+              </a>
 
-                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                              {{ csrf_field() }}
-                          </form>
-                      </li>
-                  </ul>
+              <ul class="drop-nav-reg-log">
+                <li><a href="/config">Modificar Perfil</a></li>
+                <li>
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar sesion</a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                  </li>
+              </ul>
               </li>
           @endif
       </ul>
