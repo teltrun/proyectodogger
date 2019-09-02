@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Comment;
 
 class CommentsController extends Controller
 {
@@ -23,8 +24,9 @@ class CommentsController extends Controller
 
     }
     
-    public function getComments($user, $filename){
-        
-
+    public function getComments($idPost){
+        return view('pages.index');
+        // $comentarios = Comment::where('post_id', $idPost);
+        // return $comentarios;
     }   
 }

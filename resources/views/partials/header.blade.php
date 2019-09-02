@@ -64,7 +64,7 @@
       <ul>
         <?php
         foreach($menuLateralDerecha as $key => $valor): ?>
-          <li><a href="" title="<?=$key?>"><?=$valor?></i></a></li>
+          <li><a href="/<?=$key?>" title="<?=$key?>"><?=$valor?></i></a></li>
         <?php endforeach; ?>
       </ul>
     </div>
