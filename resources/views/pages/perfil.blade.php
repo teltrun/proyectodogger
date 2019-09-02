@@ -13,6 +13,9 @@
       <div class="descripcion">
         <p>{{ Auth::user()->description }}</p>
       </div>
+      <div>
+        <button class="boton_seguir" type="button" name="button">Seguir</button>
+      </div>
     </div>
   </div>
   <div class="seguidores_numeros">
@@ -48,6 +51,7 @@
   <div class="publicaciones_perfil">
     @foreach ($posts as $post)
     <div class="publicaciones_imagen_perfil">
+<<<<<<< HEAD
       <a href="" data-toggle="modal" data-target="#modalImagen">
       <img id="imagenPost" idImagen="{{ $post->id }}" src="{{ route('user.posts', ['user' => Auth::user()->nick, 'filename' => $post['image_path']]) }}" />      
       </a></li>
@@ -102,6 +106,13 @@
           </div>
         </div>
     
+=======
+      <img src="{{ route('user.posts', ['user' => Auth::user()->nick, 'filename' => $post['image_path']]) }}" />
+      <!-- Styles <p>{{ $post['description'] }}</p> -->
+    </div>
+    @endforeach
+
+>>>>>>> 9fc496ad9bd6e6ebe2eb89137bc89d429150113f
   <div class="texto_extra">
     <ul>
       <li class="fecha">10 de enero del 2019</li>
@@ -111,4 +122,3 @@
   </div>
 </div>
 @endsection
-

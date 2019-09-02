@@ -189,14 +189,6 @@ transform: translateX(-50px);
   display: none;
 }
 
-.modificarPerfil {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  background-color: white; /*Fondo Blanco*/
-  width: 700px;
-  margin-top: 70px;
-}
 
 
 @media screen and (min-width: 768px) {
@@ -458,25 +450,44 @@ transform: translateX(-50px);
 }
 
 
-.campoForm{
-  outline: 0;
-  border:0;
-  vertical-align:baseline;
-  background:transparent;
-  text-align: center;
-  font-weight: lighter;
-  border-bottom: black 1px solid;
-  width: 500px;
-  padding: 10px;
-  margin-top: 10px;
+.contenedor_modifPerfil {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 1px red black;
+  max-width: 700px;
+  margin-top: 20px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.botonC {
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 3px;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 1em;
+  margin-top: 20px;
+  margin-left: 150px;
+}
+
+#modifFormato {
+  border-bottom: 1px black solid;
+  width: 100%;
 }
 
 .cambiarFoto{
-  width: 20%;
+  width: 25%;
 }
 
 .modificarDatos{
   width: 75%;
+
 }
 
 .campoPerfil img {
@@ -555,6 +566,21 @@ transform: translateX(-50px);
   margin-bottom: 15px;
 }
 
+@media (max-width: 500px) {
+  .contenedor_modifPerfil {
+    flex-wrap: wrap;
+    direction: column;
+    align-items: center;
+  }
+  .cambiarFoto{
+    width: 100%;
+  }
+
+  .modificarDatos{
+    width: 100%;
+
+  }
+}
 
 @media (max-width: 768px) {
 /*Resposnive de la parte del login*/
@@ -820,7 +846,7 @@ transform: translateX(-50px);
   background-color: rgba(106, 106, 106, 0.7);
   position: absolute;
   z-index: 2;
-  top: 150px;
+  top: 125px;
   height: 110px;
   padding: 10px;
 }
@@ -890,6 +916,7 @@ transform: translateX(-50px);
   margin-right: 20%;
   margin-top: 20px;
   border-bottom: 1px black solid;
+  margin-bottom: 20px;
 }
 
 .container_encabezado img{
@@ -934,6 +961,7 @@ transform: translateX(-50px);
   flex-wrap: nowrap;
   margin-left: 5px;
   margin: auto;
+  margin-bottom: 20px;
 }
 
 .seguidores_seguidos_publicaciones_blanco ul, .seguidores_seguidos_publicaciones ul {
@@ -1056,6 +1084,15 @@ transform: translateX(-50px);
   margin-bottom: 100px;
 }
 
+.boton_seguir {
+  background-color: black;
+  text-transform: uppercase;
+	border: none;
+	padding: 5px;
+	font: inherit;
+	outline: inherit;
+  color: white;
+}
 
 
 @media (max-width: 768px) {
@@ -1178,11 +1215,6 @@ transform: translateX(-50px);
 
 }
 .parte_negra{
-  background-color: black;
-  width: 60px;
-  height: 250px;
-
-
 }
 
 .imagen_timeline{
@@ -1192,20 +1224,21 @@ transform: translateX(-50px);
 }
 
 .parte_negra ul{
-  list-style: none;
-  margin-right:  0px;
   color: white;
-  padding: 20px;
-  text-align: center;
-  margin: auto;
-}
-.likear {
-  margin-top: 5px;
+  list-style: none;
+  padding: 0px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+
 }
 
-.compartir{
-  margin-top: 115px;
+.parte_negra ul li i{
+  font-size: 1.5em;
 }
+
 
 
 @media query (max-width: 768px) {
