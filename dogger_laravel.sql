@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 30-08-2019 a las 18:39:28
+-- Tiempo de generación: 03-09-2019 a las 09:06:10
 -- Versión del servidor: 5.7.26
--- Versión de PHP: 7.3.5
+-- Versión de PHP: 7.2.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -39,7 +39,16 @@ CREATE TABLE IF NOT EXISTS `comments` (
   PRIMARY KEY (`id`),
   KEY `fk_comments_users` (`user_id`),
   KEY `fk_comments_posts` (`post_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `comments`
+--
+
+INSERT INTO `comments` (`id`, `user_id`, `post_id`, `content`, `created_at`, `updated_at`) VALUES
+(24, 10, 22, 'Que lindo!', '2019-09-03 01:11:28', '2019-09-03 01:11:28'),
+(25, 10, 23, 'Que linda Valen!', '2019-09-03 01:21:46', '2019-09-03 01:21:46'),
+(26, 10, 24, 'Que hermosa Dolce!', '2019-09-03 09:02:41', '2019-09-03 09:02:41');
 
 -- --------------------------------------------------------
 
@@ -75,16 +84,18 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_posts_users` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `posts`
 --
 
 INSERT INTO `posts` (`id`, `user_id`, `image_path`, `description`, `created_at`, `updated_at`) VALUES
-(24, 10, '23Untitled-5.png', 'Prueba 1', '2019-08-29 14:02:46', '2019-08-29 14:02:46'),
-(25, 10, '2332835451.png', 'asdasdasd', '2019-08-29 16:25:30', '2019-08-29 16:25:30'),
-(26, 10, '231109.png', 'sdfsdfs', '2019-08-29 16:45:57', '2019-08-29 16:45:57');
+(21, 10, '1567472382canicross-tierra.png', 'Salimos a correr', '2019-09-03 00:59:42', '2019-09-03 00:59:42'),
+(22, 10, '1567472450descarga (1).jpg', 'Durmiendo la siesta', '2019-09-03 01:00:50', '2019-09-03 01:00:50'),
+(23, 11, '156747366854f47e57-8f92-4ac9-81c6-cdc0fa59320c.jpg', 'Valentina con Dolce', '2019-09-03 01:21:08', '2019-09-03 01:21:08'),
+(24, 12, '15674779780e261678-0a73-4a9c-8d3a-b9d7e2070b0e.jpg', 'Dolceee', '2019-09-03 02:32:58', '2019-09-03 02:32:58'),
+(25, 10, '1567501484IMG-20150429-WA0013.jpg', 'Lo importante es verse bien!', '2019-09-03 09:04:44', '2019-09-03 09:04:44');
 
 -- --------------------------------------------------------
 
@@ -104,18 +115,22 @@ CREATE TABLE IF NOT EXISTS `users` (
   `description` text,
   `genre` varchar(100) DEFAULT NULL,
   `phone` int(11) DEFAULT NULL,
+  `pais` varchar(50) NOT NULL,
+  `provincia` varchar(60) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   `remember_token` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `surname`, `nick`, `email`, `password`, `image`, `description`, `genre`, `phone`, `created_at`, `updated_at`, `remember_token`) VALUES
-(10, 'German', 'Ojeda', 'teltrun', 'germanoccjeda83@gmail.com', '$2y$10$Yv7IS2C7tPOCTWIVX1c3quaMx.w63EplOdNHUtaoX7MJ8pw3PggXu', NULL, NULL, NULL, NULL, '2019-08-29 12:35:44', '2019-08-29 12:35:44', NULL);
+INSERT INTO `users` (`id`, `name`, `surname`, `nick`, `email`, `password`, `image`, `description`, `genre`, `phone`, `pais`, `provincia`, `created_at`, `updated_at`, `remember_token`) VALUES
+(10, 'German', 'Ojeda', 'teltrun', 'germanojeda83@gmail.com', '$2y$10$J7hqEtQhqmg9bDWa4wzZPeO1SnLZSpqGSujIwlsEHne.rEn8oGuvO', 'perfil_20160401-4-1752-Foto-de-perfil-para-redes-sociales-y-curriculum-Madrid-.jpg', 'Amante de los perros', 'masculino', 1169473348, '', '', '2019-09-03 00:22:53', '2019-09-03 00:27:16', NULL),
+(11, 'Yanina', 'Villalba', 'villalbaya', 'villalbaya@gmail.com', '$2y$10$xG30O7JHagMDHS4Ch.6kh.yP9nBnxQ3928TF4QDLOO378MHhfI/5G', 'perfil_descarga.jpg', NULL, NULL, 1169473348, '', '', '2019-09-03 01:18:26', '2019-09-03 01:23:30', NULL),
+(12, 'Eduardo Luis', 'Ojeda', 'eduardoluis', 'luisojeda@gmail.com', '$2y$10$/mlUhtkKU4qKpeaIOMgnJuKuuB7/xWwrFaMO5iM7nUB4hsEUfZ2r.', 'perfil_20160401-4-1752-Foto-de-perfil-para-redes-sociales-y-curriculum-Madrid-.jpg', NULL, NULL, 321321321, 'Argentina', 'Buenos Aires', '2019-09-03 02:30:01', '2019-09-03 02:33:48', NULL);
 
 --
 -- Restricciones para tablas volcadas
