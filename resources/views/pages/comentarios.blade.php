@@ -15,7 +15,12 @@
       <div class="image">
         <img class="fotoComentario" src="{{ route('user.posts', ['user' => $posteador[0]->nick, 'filename' => $post[0]->image_path]) }}" />
       </div>
+      <br>
+        @if(Auth::user()->id == $posteador[0]->id)
+          <a href="/deletePost/{{$post[0]->id}}" class="botonC">Eliminar post</a>
+        @endif
       <hr>
+     
       <div class="addcomentario">
       <form name="frmComentario" method="POST" action="{{ route('comment.save') }}">
             {{ csrf_field() }}

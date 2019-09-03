@@ -44,4 +44,8 @@ class PostController extends Controller
         return new Response($file, 200);
     }   
 
+    public function delete($idPost){
+        Post::where('id', $idPost)->delete();
+        return redirect('/perfil')->with(['message' => 'Tu post se ha eliminado correctamente']);
+    }   
 }
