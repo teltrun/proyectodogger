@@ -8,7 +8,7 @@
                 {{ session('message') }}
             </div>
         @endif
-          <form class="contenedor_modifPerfil" method="POST" action="form-group{{ route('user.update')}}" enctype="multipart/form-data">
+          <form class="contenedor_modifPerfil" method="POST" action="{{ route('user.update')}}" enctype="multipart/form-data">
               {{ csrf_field() }}
               <!-- Subir foto de perfil -->
               <div class="cambiarFoto">

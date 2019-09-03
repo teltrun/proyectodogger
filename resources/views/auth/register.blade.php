@@ -53,6 +53,32 @@
                       @endif
                   </div>
                 </div>
+                <!-- Pais -->
+                <div class="form-group{{ $errors->has('country') ? ' has-error' : '' }}">
+                    <div>
+                      <select class="countryRegistro" name="pais" id="country">
+                        <option value="0">Seleccionar pais</option>
+                      </select>
+                      @if ($errors->has('country'))
+                        <span class="help-block">
+                          <strong>{{ $errors->first('country') }}</strong>
+                        </span>
+                      @endif
+                  </div>
+                </div>
+                <!-- Provincia -->
+                <div class="form-group{{ $errors->has('provincia') ? ' has-error' : '' }}">
+                    <div>
+                      <select class="provinciaRegistro" name="provincia" id="provincia">
+                        <option value="0">Seleccionar provincia</option>
+                      </select>
+                      @if ($errors->has('provincia'))
+                        <span class="help-block">
+                          <strong>{{ $errors->first('provincia') }}</strong>
+                        </span>
+                      @endif
+                  </div>
+                </div>
                 <!-- Contraseña -->
                 <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                     <div>

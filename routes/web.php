@@ -11,19 +11,14 @@
 |
 */
 
-//Use App\Post;
-
-// Route::get('/', function () {
-//     return view('pages/index');
-// });
-Route::get('/a', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/comentarios/{id}', 'CommentsController@getComments');
 Route::get('/timeline', 'UserController@timeline')->name('timeline');
-
 Route::get('/perfil', 'UserController@Perfil');
-
 Route::get('/config', 'UserController@config')->middleware('auth');
 Route::post('/config', 'UserController@update')->name('user.update');
 Route::post('/savePost', 'PostController@save')->name('post.save');
+Route::post('/saveComment', 'CommentsController@save')->name('comment.save');
 
 
 

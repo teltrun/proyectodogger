@@ -96,7 +96,7 @@
                 </div>
                 <div class="form-group comentarioSubirFoto">
                   <label for="message-text" class="col-form-label"></label>
-                  <textarea class="form-control" id="message-text" name="description">Haz un comentario sobre esta foto o video...</textarea>
+                  <textarea class="form-control" id="message-text" name="description" placeholder="Haz un comentario sobre esta foto o video..."></textarea>
                 </div>
                 <div class="form-group" id="contenedor-foto">
                   <label for="subirFoto" class="col-form-label subirFoto">

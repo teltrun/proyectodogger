@@ -1,4 +1,36 @@
 window.onload=function(){
+
+    fetch('https://restcountries.eu/rest/v2/all')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(myJson) {
+            // console.log(myJson);
+            $.each(myJson, function(data, index){
+                $("#country").append('<option value="'+index['name']+'">'+index['name']+'</option>');
+            });
+        });
+
+    $("#country").change(function () {
+            if($('#country').selectedIndex != 0){
+                cargarProvincia();
+            }
+            
+        });
+
+    function cargarProvincia(){
+        fetch('https://dev.digitalhouse.com/api/getProvincias')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(myJson) {
+            console.log(myJson['data']);
+            $.each(myJson['data'], function(data, index){
+                $("#provincia").append('<option value="'+index['state']+'">'+index['state']+'</option>');
+            });
+        });
+    }
+
     function filePreview(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
@@ -22,30 +54,4 @@ window.onload=function(){
         conseguirComentario(idImagen);
     });
 
-    function conseguirComentario(id){
-        console.log(id);
-        fetch('/a')
-        .then(function(data) {
-            let comments = data.json;
-            console.log(comments);
-            // comments.forEach(addComentarios) 
-        })
-    }
-
-    function addComentarios(datos){
-        $("<div>", {
-            'class': 'comentarios'
-        }).append(
-            $('<label>', {
-                'class': 'usuarioComentario',
-                'textContent': usuario
-            }),
-            $('<br>'),
-            $('<label>', {
-                'class': 'comentario',
-                'textContent': comentario
-            })
-        ).hide().appendTo('#otraDiv').fadeIn('slow');
-    };
-
-}
+};

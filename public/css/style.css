@@ -312,6 +312,10 @@ transform: translateX(-50px);
 
 }
 
+.comentarios{
+  height: auto;
+}
+
 /*Empieza css del footer*/
 
 .footer {
@@ -321,6 +325,7 @@ transform: translateX(-50px);
 
 .containerFooter{
   position: fixed;
+  margin-top: 50px;
   bottom: 0;
   text-align: center;
   width: 100%;
@@ -432,7 +437,7 @@ transform: translateX(-50px);
   margin-top: 20px;
 }
 
-#nombreApellidoRegistro, #nombreUsuarioRegistro, #emailRegistro, #contraseñaRegistro, #nombreUsuario, #select, #fotoDePerfil, #customCheck1{
+#nombreApellidoRegistro, #nombreUsuarioRegistro, #emailRegistro, .countryRegistro, .provinciaRegistro, #contraseñaRegistro, #nombreUsuario, #select, #fotoDePerfil, #customCheck1{
   outline: 0;
   border:0;
   vertical-align:baseline;
@@ -846,8 +851,9 @@ transform: translateX(-50px);
   background-color: rgba(106, 106, 106, 0.7);
   position: absolute;
   z-index: 2;
-  top: 125px;
-  height: 110px;
+  top: 145px;
+  height: 90px;
+  width: 100%;
   padding: 10px;
 }
 
@@ -1328,8 +1334,10 @@ transform: translateX(-50px);
   border: 0px !important;
 }
 
-.comentarioSubirFoto {
-
+.contenedor-comentario {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .botonPublicar {

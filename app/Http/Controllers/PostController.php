@@ -27,8 +27,8 @@ class PostController extends Controller
         $post->description = $description;
 
         if($image){
-            $filename = '23'.$image->getClientOriginalName();
-            Image::make($image)->resize(235, 235)->save(storage_path('app/posts/'.$user->nick.'/'.$filename));
+            $filename = time().$image->getClientOriginalName();
+            Image::make($image)->resize(450, 450)->save(storage_path('app/posts/'.$user->nick.'/'.$filename));
             $post->image_path = $filename;
         }
 

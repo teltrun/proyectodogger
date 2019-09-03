@@ -34,7 +34,7 @@
     <script src="/js/app.js"></script>
     <script src="/js/func.js"></script>
 
-    <script>
+    {{-- <script>
       var btnHamburguesa = document.querySelector('.header_hamburguesa');
       console.log(btnHamburguesa);
 
@@ -42,7 +42,7 @@
         var botonera = document.querySelector('.menu_lateral_derecha');
         botonera.classList.toggle('show_menu_lateral');
       })
-    </script>
+    </script> --}}
 
 </body>
 </html>
