@@ -16,6 +16,7 @@ Route::get('/comentarios/{id}', 'CommentsController@getComments');
 Route::get('/timeline', 'UserController@timeline')->name('timeline');
 Route::get('/perfil', 'UserController@Perfil');
 Route::get('/config', 'UserController@config')->middleware('auth');
+Route::get('/faq', 'HomeController@faq');
 Route::post('/config', 'UserController@update')->name('user.update');
 Route::post('/savePost', 'PostController@save')->name('post.save');
 Route::post('/saveComment', 'CommentsController@save')->name('comment.save');

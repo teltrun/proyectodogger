@@ -2,10 +2,10 @@
   <!-- Menú Lateral -->
   <?php
     $menuLateralDerecha=[
-      "home" => "<i class='fas fa-paw'>",
+      "" => "<i class='fas fa-paw'>",
       "timeline" => "<i class='fas fa-home'>",
       "perfil" => "<i class='fas fa-user'>",
-      "FAQ" => "<i class='fas fa-question-circle'>",
+      "faq" => "<i class='fas fa-question-circle'>",
     ];
 
   ?>
@@ -62,6 +62,7 @@
   @if (Auth::check())
     <div class="menu_lateral_derecha">
       <ul>
+          {{-- <li><a href="/" title="Home"><i class='fas fa-paw'></a></li> --}}
         <?php
         foreach($menuLateralDerecha as $key => $valor): ?>
           <li><a href="/<?=$key?>" title="<?=$key?>"><?=$valor?></i></a></li>
