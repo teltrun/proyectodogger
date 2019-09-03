@@ -34,7 +34,7 @@
     <script src="/js/app.js"></script>
     <script src="/js/func.js"></script>
 
-    {{-- <script>
+    <script>
       var btnHamburguesa = document.querySelector('.header_hamburguesa');
       console.log(btnHamburguesa);
 
@@ -42,7 +42,10 @@
         var botonera = document.querySelector('.menu_lateral_derecha');
         botonera.classList.toggle('show_menu_lateral');
       })
-    </script> --}}
+    </script> 
+
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5d6d4f7d16b81b0012138e5e&product=inline-share-buttons" async="async"></script> ---> esto va en el head;
+<div class="sharethis-inline-share-buttons"></div> ---> esto se supone que te trae el boton con todos los links para compartir;
 
 </body>
 </html>

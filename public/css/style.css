@@ -31,6 +31,7 @@
   margin:auto;
   justify-content: center;
   flex-wrap: wrap;
+  max-width: 60%;
 }
 
 .material-icons lupa {
@@ -89,6 +90,7 @@
   left: 0;
   bottom: 0;
   transform: translateY(100%);
+  z-index: 1;
 }
 
 .drop-nav-reg-log li {
@@ -99,7 +101,7 @@
   flex-wrap: wrap;
   display: flex;
   margin: auto;
-  min-width: 20%;
+  max-width: 20%;
   margin-right: 20px;
 }
 
@@ -208,6 +210,9 @@ transform: translateX(-50px);
 
 
 /*Resposnive del header*/
+  .user-avatar img {
+    display: none;
+  }
   .contenedor_header {
     width: 100%;
     display: flex;
@@ -217,6 +222,7 @@ transform: translateX(-50px);
 
   .header_medio {
     margin:auto;
+    max-width: 70%;
 
   }
   .header_hamburguesa {
@@ -224,11 +230,12 @@ transform: translateX(-50px);
   }
 
   .header_derecha {
-    margin: auto;
+    max-width: 20%;
   }
 
   .header_izquierda {
     display: none;
+    max-width: 20%;
   }
 
 
@@ -319,7 +326,7 @@ transform: translateX(-50px);
 /*Empieza css del footer*/
 
 .footer {
-  height: 300px;
+  height: 200px;
   color: grey;
 }
 
@@ -455,46 +462,6 @@ transform: translateX(-50px);
 }
 
 
-.contenedor_modifPerfil {
-  background-color: white;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  border: 1px red black;
-  max-width: 700px;
-  margin-top: 20px;
-  padding: 20px;
-  margin-bottom: 30px;
-}
-
-.botonC {
-  background-color: black;
-  color: white;
-  text-transform: uppercase;
-  border: none;
-  letter-spacing: 3px;
-  padding: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
-  font-size: 1em;
-  margin-top: 20px;
-  margin-left: 150px;
-}
-
-#modifFormato {
-  border-bottom: 1px black solid;
-  width: 100%;
-}
-
-.cambiarFoto{
-  width: 25%;
-}
-
-.modificarDatos{
-  width: 75%;
-
-}
-
 .campoPerfil img {
 
   width: 100px;
@@ -532,6 +499,8 @@ transform: translateX(-50px);
   padding: 30px;
   font-size: 20px;
 }
+
+
 /*Si olvidaste la contraseña*/
 .recordarme {
   margin-top: 50px;
@@ -646,9 +615,8 @@ transform: translateX(-50px);
 /*Termina css de la parte del login y registracion*/
 
 
+
 /*Empieza css de la parte de Faq*/
-
-
 
 .bodyFaq {
   background-color: white;
@@ -851,7 +819,7 @@ transform: translateX(-50px);
   background-color: rgba(106, 106, 106, 0.7);
   position: absolute;
   z-index: 2;
-  top: 145px;
+  top: 140px;
   height: 90px;
   width: 100%;
   padding: 10px;
@@ -1170,16 +1138,13 @@ transform: translateX(-50px);
 
 }
 
-
-
-
-
 /*Termina css del perfil*/
+
 
 /*Empieza css del timeline*/
 
 .publicaciones_timeline{
-  position: relative;
+
   max-width: 700px;
   margin-left: 20%;
   margin-right: 20%;
@@ -1203,7 +1168,7 @@ transform: translateX(-50px);
   height: 250px;
   margin-top: 25px;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .publicacion_timeline1 img{
@@ -1216,11 +1181,13 @@ transform: translateX(-50px);
   height: 250px;
   margin-top: 25px;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 
 
 }
 .parte_negra{
+  position: absolute;
+  margin-top: -20px;
 }
 
 .imagen_timeline{
@@ -1236,13 +1203,14 @@ transform: translateX(-50px);
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 10px;
+  justify-content: flex-end;
+  margin-left: 50px;
 
 }
 
 .parte_negra ul li i{
   font-size: 1.5em;
+  padding: 10px;
 }
 
 
@@ -1261,7 +1229,8 @@ transform: translateX(-50px);
 
 }
 
-  /*Subir Foto*/
+
+/*Subir Foto*/
 .tamaño_foto{
   width: 60px;
   height: 60px;
@@ -1334,10 +1303,26 @@ transform: translateX(-50px);
   border: 0px !important;
 }
 
-.contenedor-comentario {
+
+/*Editar Foto*/
+
+.todo-comentario {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+}
+
+.contenedor-comentario {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  background-color: rgba(167, 167, 167, 0.2);
+  padding: 30px;
+}
+
+.fotoComentario {
+  width: 100%;
 }
 
 .botonPublicar {
@@ -1347,4 +1332,63 @@ transform: translateX(-50px);
   text-transform: uppercase;
   border: 0px;
   width: 100%;
+}
+
+#comentarios-titulo {
+  text-transform: uppercase;
+  font-size: 1em;
+  color: black;
+  border-bottom: 1px black solid;
+  padding: 10px;
+}
+
+#comentar-titulo {
+  background-color: black;
+  text-transform: uppercase;
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+
+
+/*Configurar Foto*/
+
+.contenedor_modifPerfil {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 1px red black;
+  max-width: 700px;
+  margin-top: 20px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.botonC {
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 3px;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 1em;
+  margin-top: 20px;
+  margin-left: 150px;
+}
+
+#modifFormato {
+  border-bottom: 1px black solid;
+  width: 100%;
+}
+
+.cambiarFoto{
+  width: 25%;
+}
+
+.modificarDatos{
+  width: 75%;
+
 }

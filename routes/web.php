@@ -27,8 +27,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/user/foto/{user}/{filename}', 'UserController@getImage')->name('user.foto');
 Route::get('/user/posts/{user}/{filename}', 'PostController@getPosts')->name('user.posts');
-
-
-
-
-
+Route::get('/followers', 'FollowersController@followers')->name('followers');

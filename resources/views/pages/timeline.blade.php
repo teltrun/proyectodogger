@@ -23,11 +23,11 @@
                <p class= usuario_publicacion>{{ $imagen->users->name }}</p>
                <p class= bajada_publicacion>{{ $imagen->description }}</p>
                <div class="parte_negra">
-                 <ul>
-                 <li class="comentar"><i class="material-icons">comment</i>{{ count($imagen->comments) }}</li>
-                   <li class="likear"><i class="material-icons">thumb_up</i>{{ count($imagen->likes) }}</li>
+                <ul>
+                  <li class="comentar"><i class="material-icons">comment</i>{{ count($imagen->comments) }}</li>
+                  <li class="likear"><i class="material-icons">thumb_up</i>{{ count($imagen->likes) }}</li>
                    {{-- <li class="compartir"><i class="material-icons">share</i></li> --}}
-                 </ul>
+                </ul>
                </div>
              </div>
           </div>
